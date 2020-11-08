@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    android:id="@+id/sliding_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.F_Renungan.Detail.Activity_Detail_Renungan"
+    app:umanoDragView="@id/drag_view"
+    app:umanoScrollableView="@id/main"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    app:umanoPanelHeight="0dp"
+    android:background="#FFF"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:paddingLeft="@dimen/padding_layout_lg"
+            android:paddingRight="@dimen/padding_layout_lg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_book" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_layout_md"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_layout_lg"
+                        android:text="@string/title_bible"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_size_lg" />
+
+                    <TextView
+                        android:id="@+id/tv_title_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_layout_lg"
+                        android:textColor="@color/color_title"
+                        android:visibility="gone"
+                        android:textSize="@dimen/text_size_sm" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:layout_marginLeft="@dimen/margin_layout_lg"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+
+                <FrameLayout
+                    android:id="@+id/btn_setting"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_setting" />
+                </FrameLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_layout_lg"
+            android:weightSum="5">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="@dimen/margin_layout_md"
+                android:gravity="center"
+                android:layout_weight="5">
+                <LinearLayout
+                    android:id="@+id/layout_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_search_dark"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Belum Ada Pencarian"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/text_size_lg" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/layout_bible"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview_bible_verse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutAnimation="@anim/animation_recyclerview"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                </LinearLayout>
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_view_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+                        <include layout="@layout/loading_item_bible"/>
+
+                    </LinearLayout>
+
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_bible_book">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_bible_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_layout_lg"
+                    android:layout_marginBottom="@dimen/margin_layout_lg"
+                    android:layoutAnimation="@anim/animation_recyclerview" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/drag_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFF">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/margin_layout_lg"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="@dimen/margin_layout_sm"
+                android:textSize="@dimen/text_size_md"
+                android:text="Pengaturan Alkitab"/>
+            <TextView
+                android:id="@+id/tv_close"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:layout_marginRight="@dimen/margin_layout_md"
+                android:textColor="@color/color_title_sub"
+                android:drawableRight="@drawable/ic_close"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+
+            <include layout="@layout/layout_setting_bibble"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

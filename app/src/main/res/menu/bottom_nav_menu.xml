@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_warta"
+        android:icon="@drawable/ic_warta"
+        android:title="@string/title_warta" />
+
+    <item
+        android:id="@+id/navigation_renungan"
+        android:icon="@drawable/ic_kitab"
+        android:title="@string/title_renungan" />
+
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/title_chat" />
+
+    <item
+        android:id="@+id/navigation_keuangan"
+        android:icon="@drawable/ic_keuangan"
+        android:title="@string/title_keuangan" />
+
+
+    <item
+        android:id="@+id/navigation_multimedia"
+        android:icon="@drawable/ic_multimedia"
+        android:title="@string/title_multimedia" />
+
+
+</menu>

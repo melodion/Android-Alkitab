@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ALKITAB</string>
+    <string name="title_warta">Warta</string>
+    <string name="title_renungan">Renungan</string>
+    <string name="title_chat">Diskusi</string>
+    <string name="title_keuangan">Keungan</string>
+    <string name="title_multimedia">Multimedia</string>
+    <string name="title_profil">Profil</string>
+    <string name="title_informasi">Informasi</string>
+    <string name="title_bible">ALKITAB</string>
+    <string name="baca_renungan">Baca Renungan</string>
+    <string name="baca_berita">Baca Berita</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="version">Versi Alkitab</string>
+
+    <string-array name="versions">
+        <item>Pilih</item>
+        <item>TB</item>
+        <item>Jawa</item>
+    </string-array>
+</resources>
