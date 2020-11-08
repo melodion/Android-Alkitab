@@ -1,1 +1,1 @@
-# Warta Gereja Android
+# ALkitab Android
